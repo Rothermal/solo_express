@@ -1,9 +1,9 @@
 /**
  * Created by JFCS on 1/6/16.
  */
-$(document).ready(function(){
+$(document).ready(function() {
     $('.test').text('Express Solo challange');
-    $('.get').on('click', function(event){
+    $('.get').on('click', function (event) {
         event.preventDefault();
         addBalance();
     });
@@ -14,10 +14,9 @@ $(document).ready(function(){
 
 
 function addBalance(){
-    $.ajax('/balance').then(function(response){
-        $('.balance').html(response);
+    $.ajax('/get/data').then(function(response) {
+        $('.balance').html(response).hide().slideDown();
 
-    });
-};
-
+        });
+    }
 });
