@@ -11,10 +11,10 @@ var accountBalance = require('./modules/accountBalance');
 app.use(express.static('static'));
 
 
-app.get('/', function (request,response) {
-    response.sendFile(path.join(__dirname ,'/static/index.html'));
+//app.get('/', function (request,response) {
+//    response.sendFile(path.join(__dirname ,'/static/index.html'));
 
-});
+//});
 
 app.get('/balance', function (request,response) {
     var sendBalance = '<p>'+ accountBalance.balance() + accountBalance.dollar() + '</p>';
